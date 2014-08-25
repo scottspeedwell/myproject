@@ -1,0 +1,19 @@
+<title><font face="arial";size=10px;text size=7>HTML & CSS TUTORIAL</title>
+<h1><div style="background-color:#A4C3C9;box-shadow: 10px 10px 5px #0F79A3;border: 2px solid; border-color:#0F79A3;border-radius: 25px; padding:40px;"><font face="arial";><big>H</big>TML <big>&</big> <big>C</big>SS <big>T</big>UTORIAL</div></h1>
+<body><center>
+
+
+
+dir="ltr" lang="en" >
+
+
+
+text-transform: capitalize turns the first letter of every word into uppercase.
+text-transform: uppercase turns everything into uppercase.
+text-transform: lowercase turns everything into lowercase.
+text-transform: none I’ll leave for you to work 
+
+
+box-shadow: 5px 5px 3px 1px #999
+
+text-shadow: -2px 2px 2px #999;
