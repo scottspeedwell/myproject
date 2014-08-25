@@ -1,0 +1,24 @@
+<style type="text/css">
+.myTableText { border-collapse:collapse;background-color:#A4C3C9; }
+.myTableText td, .myTableText th { border:2px solid #A4C3C9;padding:5px; }
+.myTableText th { font:bold 18px/1.1em Arial, Helvetica, sans-serif;text-shadow: 1px 1px 4px black; letter-spacing:0.1em; background-color:#47ae32; color:#98FB98; }
+.myTableText td { font:normal 14px/1.5em Goudy, Georgia, serif;color:#A4C3C9; }
+.myTableText td a:link { color:#006400;text-decoration:none; }
+.myTableText td a:visited { color:#006400; }
+.myTableText td a:hover { color:#FF4500;text-decoration:underline; }
+.myTableText td a:active { color:#FF0000; }
+</style>
+<!-- Place the above styles within the document's <head></head> tags -->
+<table class="myTableText">
+<tr>
+<th>Home</th>
+</tr>
+<tr>
+<td><a href="/css/">op1</a></td>
+<td><a href="/css/css3/">op2</a></td>
+</tr>
+<tr>
+<td><a href="/html/op3</a></td>
+<td><a href="/sql/tutorial/op4/a></td>
+</tr>
+</table>
