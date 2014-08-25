@@ -1,11 +1,13 @@
 h1{
-background-color:#A4C3C9;
+background: #A4C3C9;
 border-radius: 10px;
 border=2px solid;
-border-color:#0F79A3;
 padding:40px;
+border-radius:5px;
+border-color:#0F79A3;
+box-shadow: linear-gradient(to bottom, #A4C3C9, white);
 font-size:40px; 
-text-shadow:shadow;~
+text-shadow: -4px 4px 4px #999;
 color:black;
 font-family="Arial";
 text-transform: capitalize;
@@ -36,7 +38,8 @@ p{font-size:14px;
 	text-align: right;
 	}
 tr{
-text-shadowing;~
+box-shadow: -5px 5px 3px 1px #999;
+text-shadow: -4px 4px 4px #999;
 }
 
 
