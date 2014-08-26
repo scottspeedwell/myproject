@@ -9,29 +9,28 @@
 <h3><big>b</big>y <big>M</big>ichael <big>M</big>iller
 </h3>
 <style type="text/css">
+.myTableText {width: 10em; float:left;}
 .myTableText { border-collapse:collapse;background-color:#A4C3C9; }
-.myTableText td, .myTableText th { border:2px solid #0F79A3;padding:5px; }
-.myTableText th { font:bold 18px/1.1em Arial, Helvetica, sans-serif;text-shadow: -5px 5px 3px 1px #999; letter-spacing:0.1em; background-color:#A4C3C9;border-radius:5px; }
-.myTableText td { font:normal 14px/1.5em Goudy, Georgia, serif;color:black; }
-.myTableText td a:link { color:black;text-decoration:none; }
-.myTableText td a:visited { color:black; }
-.myTableText td a:hover { color:black;text-decoration:underline; }
-.myTableText td a:active { color:black; }
+.myTableText col, .myTableText col { border:2px solid #0F79A3;padding:5px; }
+.myTableText col { font:bold 18px/1.1em Arial, Helvetica, sans-serif;text-shadow: -5px 5px 3px 1px #999; letter-spacing:0.1em; background-color:#A4C3C9;border-radius:5px; }
+.myTableText col { font:normal 14px/1.5em Goudy, Georgia, serif;color:black; }
+.myTableText col a:link { color:black;text-decoration:none; }
+.myTableText col a:visited { color:black; }
+.myTableText col a:hover { color:black;text-decoration:underline; }
+.myTableText col a:active { color:black; }
 </style>
 <!-- Place the above styles within the document's <head></head> tags -->
 <table class="myTableText">
-<tr>
-<th>Home</th>
-</tr>
-<tr>
-<td><a href="/news/">News</a></td>
-<td><a href="/events/">Events</a></td>
-<td><a href="/articles/">Articles</a></td>
-<td><a href="/login/">Login</a></td>
-<td><a href="/register/">Register</a></td>
-<td><a href="/about us/">About Us</a></td>
-<td><a href="/links/">Links</a></td>
-</tr>
+<colgroup>
+<col><a href="/home/">Home</a></col>
+<col><a href="/news/">News</a></col>
+<col><a href="/events/">Events</a></col>
+<col><a href="/articles/">Articles</a></col>
+<col><a href="/login/">Login</a></col>
+<col><a href="/register/">Register</a></col>
+<col><a href="/about us/">About Us</a></col>
+<col><a href="/links/">Links</a></col>
+</colgroup>
 </table>
 
 
