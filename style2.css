@@ -1,0 +1,43 @@
+h1{
+background: #AFC7D7;
+border-radius: 10px;
+border=2px solid;
+padding:40px;
+border-radius:5px;
+border-color:#0F79A3;
+box-shadow: linear-gradient(to bottom, #A4C3C9, white);
+font-size:40px; 
+text-shadow: -4px 4px 4px #999;
+color:black;
+font-family="Arial";
+text-transform: capitalize;
+text-align:center;
+
+}
+h2{
+font-size:18px; 
+color:black;
+font-family="Arial";
+text-decoration:underline;
+text-transform: capitalize ;
+text-align: center;
+
+}
+h3{
+font-size:10px; 
+color:black;
+font-family="Arial";
+text-decoration:none;
+text-align: center;
+text-transform: capitalize 
+}
+p{font-size:14px; 
+	color:black;
+	font-family="Arial"; 
+	text-decoration:none;
+	text-align: right;
+	}
+tr{
+box-shadow: -5px 5px 3px 1px #999;
+text-shadow: -4px 4px 4px #999;
+}
