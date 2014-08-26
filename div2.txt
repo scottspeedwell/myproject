@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+head {font: 12px Arial;
+color: black;
+text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+text-transform: uppercase;
+text-align: center;
+text-decoration: underline;
+}
+	
+<html dir="ltr" lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<title>Page Layout | HTML Dog</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	
+	<link href="/r10/goldenjackal.css" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,300,400,600,700' rel="stylesheet">
+
+	<!--[if lt IE 9]><link href="/r10/damnyouGJ.css" rel="stylesheet"><script src="/r10/html5shiv.js"></script><![endif]-->
+	<script src="/r10/codehighlighter.js"></script>
+
+</head>
+
+
+
+
+
+
+<body class="level3">
+
+
+<div id="dog_tag"><p><a href="/"><img src="/r10/logoNew.gif" alt="HTML Dog" width="80" height="58"><span></span></a></p></div>
+<p id="access_nav"><a href="#main_nav">Skip to navigation</a></p>
+<nav id="you_are_here"><a href="/" id="home_link">Home</a><span> &rarr; </span><a href="/guides/">Tutorials</a><span> &rarr; </span><a href="/guides/css/">CSS</a><span> &rarr; </span><a href="/guides/css/intermediate/">Intermediate</a><span id="yah_last"> &rarr; </span></nav>
+
+<article>
+
+<header>
+
+	<div id="flowerbreak" class="flowernum2 flowerextra"></div>
+	<h1>Page Layout</h1>
+
+	<p>In the olden days, pre-hominid apes used HTML <em>tables</em> to layout web pages. Hilarious, right?! But CSS, that 2001: A Space Odyssey monolith, soon came along and changed all of that.</p>
+
+<p>Layout with CSS is easy. You just take a chunk of your page and shove it wherever you choose. You can place these chunks <em>absolutely</em> or <em>relative</em> to another chunk.</p>
+
+
+	
+		<aside id="flower_primary" class="flower">
+			<div id="bsap_1294690" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div>
+		</aside>
+
+
+</header>
+
+<section id="main_content">
+
+
+
+
+<h2>Positioning</h2>
+
+<p>The <a href="/reference/cssproperties/position/" class="acode"><code>position</code></a> property is used to define whether a box is absolute, relative, static or fixed:</p>
+
+<ul>
+<li><code>static</code> is the default value and renders a box in the normal order of things, as they appear in the HTML.</li>
+<li><code>relative</code> is much like <code>static</code> but the box can be offset from its original position with the properties <code >top</code>, <code >right</code>, <code >bottom</code> and <code >left</code>.</li>
+<li><code>absolute</code> pulls a box out of the normal flow of the HTML and delivers it to a world all of its own. In this crazy little world, the absolute box can be placed anywhere on the page using <code >top</code>, <code >right</code>, <code >bottom</code> and <code >left</code>.</li>
+<li><code>fixed</code> behaves like <code>absolute</code>, but it will absolutely position a box in reference to the browser window as opposed to the web page, so fixed boxes should stay exactly where they are on the screen even when the page is scrolled.</li>
+</ul>
+
+<aside class="note i">
+<p>When we talk of absolutely positioned boxes being placed anywhere on the page, they&#8217;re actually still relatively positioned from the edges of the page. And to add another backtrack, the page doesn&#8217;t actually have to be the container - a box will be &#8220;absolutely&#8221; positioned in relation to any non-static positioned containing box. Just ignore that for now, though&#8230;</p>
+</aside>
+
+<h3>Layout using absolute positioning</h3>
+
+<p>You can create a traditional two-column layout with absolute positioning if you have something like the following HTML:</p>
+
+<pre><code class="html">
+&lt;div id="navigation"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="this.html"&gt;This&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="that.html"&gt;That&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="theOther.html"&gt;The Other&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id="content"&gt;
+    &lt;h1&gt;Ra ra banjo banjo&lt;/h1&gt;
+    &lt;p&gt;Welcome to the Ra ra banjo banjo page. Ra ra banjo banjo. Ra ra banjo banjo. Ra ra banjo banjo.&lt;/p&gt;
+    &lt;p&gt;(Ra ra banjo banjo)&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+<aside class="note i">
+<p>We&#8217;re being old-skool and using <a href="/reference/htmltags/div/" class="acode"><code>div</code></a> elements so as not to introduce too many new things, but <a href="/guides/html/intermediate/sectioning/">Sectioning</a> is sexier.</p>
+</aside>
+
+<p>And if you apply the following CSS:</p>
+
+<pre><code class="css">
+#navigation {
+    <em>position: absolute;</em>
+    <em>top: 0;</em>
+    <em>left: 0;</em>
+    width: 200px;
+}
+
+#content {
+    margin-left: 200px;
+}
+</code></pre>
+
+<p>You will see that this will set the navigation bar to the left and set the width to 200 pixels. Because the navigation is absolutely positioned, it has nothing to do with the flow of the rest of the page so all that is needed is to set the left margin of the content area to be equal to the width of the navigation bar.</p>
+
+<p>How stupidly easy! And you aren&#8217;t limited to this two-column approach. With clever positioning, you can arrange as many blocks as you like. If you wanted to add a third column, for example, you could add a &#8220;navigation2&#8221; chunk to the HTML and change the CSS to:</p>
+
+<pre><code class="css">
+#navigation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+}
+
+#navigation2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+}
+
+#content {
+    margin: 0 200px; /* setting top and bottom margin to 0 and right and left margin to 200px */
+}
+</code></pre>
+
+<p>The only downside to absolutely positioned boxes is that because they live in a world of their own, there is no way of accurately determining where they end. If you were to use the examples above and all of your pages had small navigation bars and large content areas, you would be okay, but, especially when using relative values for widths and sizes, you often have to abandon any hope of placing anything, such as a footer, below these boxes. If you wanted to do such a thing, one way would be to <em>float</em> your chunks, rather than absolutely positioning them.</p>
+
+<h2>Floating</h2>
+
+<p>Floating a box will shift it to the right or left of a line, with surrounding content flowing around it.</p>
+
+<p>Floating is normally used to shift around smaller chunks within a page, such as pushing a navigation link to the right of a container, but it can also be used with bigger chunks, such as navigation columns.</p>
+
+<p>Using <a href="/reference/cssproperties/float/" class="acode"><code>float</code></a>, you can <code>float: left</code> or <code>float: right</code>.</p>
+
+<p>Working with the same HTML, you could apply the following CSS:</p>
+
+<pre><code class="css">
+#navigation {
+    <em>float: left;</em>
+    width: 200px;
+}
+
+#navigation2 {
+    <em>float: right;</em>
+    width: 200px;
+}
+
+#content {
+    margin: 0 200px;
+}
+</code></pre>
+
+<p>Then, if you do not want the next box to wrap around the floating objects, you can apply the <a href="/reference/cssproperties/clear/" class="acode"><code>clear</code></a> property:</p>
+
+<ul>
+<li><code>clear: left</code> will clear left floated boxes</li>
+<li><code>clear: right</code> will clear right floated boxes</li>
+<li><code>clear: both</code> will clear both left and right floated boxes.</li>
+</ul>
+
+<p>So if, for example, you wanted a footer in your page, you could add a chunk of HTML&#8230;</p>
+
+<pre><code class="html">
+&lt;div id="footer"&gt;
+    &lt;p&gt;Footer! Hoorah!&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>&#8230;and then add the following CSS:</p>
+
+<pre><code class="css">
+#footer {
+    <em>clear: both;</em>
+}
+</code></pre>
+
+<p>And there you have it. A footer that will appear underneath all columns, regardless of the length of any of them.</p>
+
+<aside class="note">
+<p>This has been a general introduction to positioning and floating, with emphasis on the larger &#8220;chunks&#8221; of a page, but remember, these methods can be applied to any box within those boxes, too. With a combination of positioning, floating, margins, padding and borders, you should be able to represent any web design your mischievous little imagination can conjure. The best way to learn? Tinker! Play! Go!</p>
+</aside>
+
+
+
+<aside id="flowers">
+	<div class="flower">
+		<div id="bsap_1294762" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div>
+	</div>
+	
+	<div class="blossom">
+		<div id="bsap_1294763" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div>
+		<div id="bsap_1294764" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div>
+	</div>
+
+	<p><a href="/advertise/">Advertise With Us</a></p>
+
+</aside>
+
+
+
+</section>
+
+
+<footer id="related">
+
+  <h2>Related pages</h2>
+
+
+  <ul>
+  <li>Next Page: <a href="../../advanced/">CSS Advanced Tutorial</a></li>
+  <li>Previous Page: <a href="../pseudoelements/">Pseudo Elements</a></li>
+  <li><a href="/guides/html/intermediate/sectioning/">Sectioning</a>: HTML for more meaningful page structure.</li>
+  </ul>
+
+
+
+
+  <h3>Working Examples</h3>
+  <ul>
+  <li><a href="/examples/positioning1.html">Positioning 1</a> - static</li>
+  <li><a href="/examples/positioning2.html">Positioning 2</a> - relative</li>
+  <li><a href="/examples/positioning3.html">Positioning 3</a> - absolute</li>
+  <li><a href="/examples/positioning4.html">Positioning 4</a> - absolute within a relative box</li>
+  <li><a href="/examples/float1.html">Floating 1</a> - a simple floated box</li>
+  <li><a href="/examples/float2.html">Floating 2</a> - two floated boxes</li>
+  <li><a href="/examples/float3.html">Floating 3</a> - clearing floated boxes</li>
+  <li><a href="/examples/pagelayout1.html">Page layout 1</a> - two columns step 1 - positioning a navigation column</li>
+  <li><a href="/examples/pagelayout2.html">Page layout 2</a> two columns step 2 - using <code>margin</code> to push the content out from under the navigation column</li>
+  <li><a href="/examples/pagelayout3.html">Page layout 3</a> - using a border to provide the background for a column</li>
+  <li><a href="/examples/pagelayout4.html">Page layout 4</a> - three columns</li>
+  <li><a href="/examples/pagelayout5.html">Page layout 5</a> - adding a header</li>
+  <li><a href="/examples/pagelayout6.html">Page layout 6</a> - footers won&#8217;t always work with absolute positioned columns&#8230;</li>
+  <li><a href="/examples/pagelayout7.html">Page layout 7</a> - adding a footer using floated columns</li>
+  <li><a href="/examples/darwin.html">Charles Darwin</a> - a styled up version of the basic principles of the previous examples</li>
+  </ul>
+
+
+
+
+  <h3>Reference</h3>
+  <ul>
+  <li><a href="/reference/cssproperties/position/">position</a></li>
+  <li><a href="/reference/htmltags/div/">div tag</a></li>
+  <li><a href="/reference/cssproperties/width/">width</a></li>
+  <li><a href="/reference/cssproperties/margin/">margin</a></li>
+  <li><a href="/reference/cssproperties/left/">left</a></li>
+  <li><a href="/reference/cssproperties/right/">right</a></li>
+  <li><a href="/reference/cssproperties/float/">float</a></li>
+  <li><a href="/reference/cssproperties/clear/">clear</a></li>
+  </ul>
+
+
+
+
+</footer>
+
+
+</article>
+
+
+<nav id="main_nav">
+
+	<ul>
+
+		<li id="li_tut"><a href="/guides/" >Tutorials</a>
+			<ul>
+				<li><a href="/guides/html/">HTML</a></li>
+				<li><a href="/guides/css/" class="asec">CSS</a>					<ul>
+                    <li><a href="/guides/css/beginner/">Beginner</a></li>
+                    <li><a href="/guides/css/intermediate/" class="asec">Intermediate</a>							<ul>
+								<li><a href="/guides/css/intermediate/classid/">Class and ID Selectors</a></li>
+								<li><a href="/guides/css/intermediate/grouping/">Grouping and Nesting</a></li>
+								<li><a href="/guides/css/intermediate/pseudoclasses/">Pseudo Classes</a></li>
+								<li><a href="/guides/css/intermediate/shorthand/">Shorthand Properties</a></li>
+								<li><a href="/guides/css/intermediate/backgroundimages/">Background Images</a></li>
+								<li><a href="/guides/css/intermediate/specificity/">Specificity</a></li>
+								<li><a href="/guides/css/intermediate/display/">Display</a></li>
+								<li><a href="/guides/css/intermediate/pseudoelements/">Pseudo Elements</a></li>
+								<li><a href="/guides/css/intermediate/layout/">Page Layout</a></li>
+							</ul></li>
+                    <li><a href="/guides/css/advanced/">Advanced</a></li>
+					</ul></li>
+				<li><a href="/guides/javascript/">JavaScript</a></li>
+			</ul>
+		</li>
+
+		<li id="li_tech"><a href="/techniques/">Techniques</a></li>
+
+		<li id="li_eg"><a href="/examples/">Examples</a></li>
+
+	    <li id="li_ref"><a href="/reference/" >References</a>
+			<ul>
+				<li><a href="/reference/htmltags/">HTML Tags</a></li>
+				<li><a href="/reference/cssproperties/">CSS Properties</a></li>			
+			</ul>
+		</li>
+
+		<li id="li_wh" class="subli superli"><a href="/webhosting/">Web Hosting</a></li>
+
+		<li class="subli superli"><a href="/about/">About Us</a></li>
+		<li class="subli"><a href="/linkto/">Link to Us</a></li>
+		<li id="li_smap" class="subli"><a href="/sitemap/">Site Map</a></li>
+
+		<li id="access_top"><a href="#">&#8593; Top</a></li>    
+	</ul>
+
+	<p id="tweet"><a href="https://twitter.com/htmldog">Tweet @htmldog</a></p>
+
+
+</nav>
+
+
+<form action="/search/" id="search">
+
+	<fieldset><label for="morombe">Search: </label><input name="q" id="morombe"><input type="submit" value="Search"></fieldset>
+
+</form>
+
+
+
+
+<footer id="site_footer">
+	<p>&copy; 2003&#8211;2014.</p>
+	<p><a href="/terms/">Terms of use</a>.</p>
+	<p>Hosted by <a href="http://www.siteground.com/index.htm?afcode=4960306b51b3ed1ddecbf83b3076ee11">SiteGround</a>.</p>
+<p id="flogo"><a href="/"><img src="/r10/htmldog90_lg.gif" width="90" height="18" alt="HTML Dog"></a></p>
+</footer>
+
+
+</body>
+
+<script async src="http://s3.buysellads.com/ac/bsa.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49412703-1', 'htmldog.com');
+  ga('send', 'pageview');
+
+</script>
+
+</html>

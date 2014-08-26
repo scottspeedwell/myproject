@@ -1,0 +1,74 @@
+<title><font face="arial";size=10px;text size=7>HTML & CSS TUTORIAL</title>
+<h1><div style="background-color:#A4C3C9;box-shadow: 10px 10px 5px #0F79A3;border: 2px solid; border-color:#0F79A3;border-radius: 25px; padding:40px;"><font face="arial";><big>H</big>TML <big>&</big> <big>C</big>SS <big>T</big>UTORIAL</div></h1>
+<body><center>
+Possible Values
+inherit
+ left - floats the box to the left with surrounding content flowing to the right.
+ right - floats the box to the right with surrounding content flowing to the left.
+none (default)
+
+Example
+
+#boondoggle {
+	width: 20em;
+	float: left;
+}
+
+
+Possible Values
+inherit
+ left - floats the box to the left with surrounding content flowing to the right.
+ right - floats the box to the right with surrounding content flowing to the left.
+none (default)
+
+Example
+
+#boondoggle {
+	width: 20em;
+	float: left;
+}
+
+dir="ltr" lang="en" >
+
+
+Scott Bellew [sbellew@catalystitservices.com]
+ 2.0.31005.0 
+Outlook Web App experience: Basic 
+User language: English (United States) 
+User time zone: (UTC-08:00) Pacific Time (US & Canada) 
+Exchange mailbox address: /o=Catalyst/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Recipients/cn=Scott Belew1f4 
+Host address: https://mail.catalystitservices.com/owa 
+Version: 14.2.328.9 
+Host name: mail.catalystitservices.com 
+Exchange Client Access server name: CORPEXCH01.catalystsolves.com 
+Exchange Client Access server .NET Framework version: 2.0.50727.5466 
+Client Access server operating system version: Microsoft Windows NT 6.1.7601 Service Pack 1 
+Client Access server operating system language: en-US 
+Client Access server version: 14.2.247.0 
+Client Access server language: en-US 
+Client Access server time zone: (UTC-05:00) Eastern Time (US & Canada) 
+Client Access server platform: 64bit 
+Mailbox server name: CORPEXCH01.catalystsolves.com 
+
+text-transform: capitalize turns the first letter of every word into uppercase.
+text-transform: uppercase turns everything into uppercase.
+text-transform: lowercase turns everything into lowercase.
+text-transform: none I’ll leave for you to work 
+
+
+box-shadow: 5px 5px 3px 1px #999
+The first value is the horizontal offset - how far the shadow is nudged to the right (or left if it’s negative)
+The second value is the vertical offset - how far the shadow is nudged downwards (or upwards if it’s negative)
+The third value is the blur radius - the higher the value the less sharp the shadow. (“0” being absolutely sharp). This is optional - omitting it is equivalent of setting “0”.
+The fourth value is the spread distance - the higher the value, the larger the shadow (“0” being the inherited size of the box). This is also optional - omitting it is equivalent of setting “0”.
+The fifth value is a color. That’s optional, too.
+
+
+text-shadow: -2px 2px 2px #999;
+Similarly to box-shadow:
+The first value is the horizontal offset
+The second value is the vertical offset
+The third value is the blur radius (optional)
+The fourth value is the color (optional, although omitting this will make the shadow the same color as the text itself)
+
+Note that there is no spread distance or inset option for text-shadow

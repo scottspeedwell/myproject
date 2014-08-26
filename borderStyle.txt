@@ -1,0 +1,7 @@
+h2{
+border-style: To make a border around an element, all you need is border-style. The values can be solid, dotted, dashed, double, groove, ridge, inset and outset.
+border-width: 3px;
+border-left-width: 10px;
+border-right-width: 10px;
+border-color: red;
+}
